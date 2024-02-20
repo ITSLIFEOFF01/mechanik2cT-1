@@ -59,34 +59,25 @@ ul li:last-child:before {
     height: 50%;
 }
 
-.folder span {
+.folder span, .file span {
     cursor: pointer;
     display: inline-block;
     margin-right: 10px;
     width: 20px; /* Ширина мини-фото */
     height: 20px; /* Высота мини-фото */
-    background-image: url('folder1.png'); /* Фото для папок */
     background-size: cover;
+}
+
+.folder span {
+    background-image: url('folder-icon.jpg'); /* Фото для папок */
 }
 
 .file span {
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-    width: 20px; /* Ширина мини-фото */
-    height: 20px; /* Высота мини-фото */
-    background-image: url('file-icon.png'); /* Фото для файлов */
-    background-size: cover;
+    background-image: url('file-icon.jpg'); /* Фото для файлов */
 }
 
 .special-file span {
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-    width: 20px; /* Ширина мини-фото */
-    height: 20px; /* Высота мини-фото */
-    background-image: url('special-file-icon.png'); /* Фото для особых файлов */
-    background-size: cover;
+    background-image: url('special-file-icon.jpg'); /* Фото для особых файлов */
 }
 
 /* Для иконки сайта */
@@ -158,24 +149,13 @@ ul li:last-child:before {
           <span></span>
           <span>Milosz</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для Milosz -->
             <li class="file">
               <span></span>
               <span>1. MiloszFile1.txt</span>
             </li>
-            <li class="folder closed">
+            <li class="file">
               <span></span>
-              <span>MiloszSubFolder</span>
-              <ul style="display: none;">
-                <li class="file">
-                  <span></span>
-                  <span>1. MiloszSubFile1.txt</span>
-                </li>
-                <li class="file">
-                  <span></span>
-                  <span>2. MiloszSubFile2.txt</span>
-                </li>
-              </ul>
+              <span>2. MiloszFile2.txt</span>
             </li>
           </ul>
         </li>
@@ -183,24 +163,13 @@ ul li:last-child:before {
           <span></span>
           <span>Tabele</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для Tabele -->
             <li class="file">
               <span></span>
               <span>1. TabeleFile1.txt</span>
             </li>
-            <li class="folder closed">
+            <li class="file">
               <span></span>
-              <span>TabeleSubFolder</span>
-              <ul style="display: none;">
-                <li class="file">
-                  <span></span>
-                  <span>1. TabeleSubFile1.txt</span>
-                </li>
-                <li class="file">
-                  <span></span>
-                  <span>2. TabeleSubFile2.txt</span>
-                </li>
-              </ul>
+              <span>2. TabeleFile2.txt</span>
             </li>
           </ul>
         </li>
@@ -208,7 +177,6 @@ ul li:last-child:before {
           <span></span>
           <span>Span i Div</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для Span i Div -->
             <li class="file">
               <span></span>
               <span>1. SpanDivFile1.txt</span>
@@ -223,7 +191,6 @@ ul li:last-child:before {
           <span></span>
           <span>Formularze</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для Formularze -->
             <li class="file">
               <span></span>
               <span>1. FormularzeFile1.txt</span>
@@ -238,7 +205,6 @@ ul li:last-child:before {
           <span></span>
           <span>Znaki Specjalne</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для Znaki Specjalne -->
             <li class="file">
               <span></span>
               <span>1. ZnakiSpecjalneFile1.txt</span>
@@ -251,9 +217,8 @@ ul li:last-child:before {
         </li>
         <li class="folder closed">
           <span></span>
-          <span>CSS wpisany</span>
+          <span>CSS Wpisany</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для CSS wpisany -->
             <li class="file">
               <span></span>
               <span>1. CSSWpisanyFile1.txt</span>
@@ -266,9 +231,8 @@ ul li:last-child:before {
         </li>
         <li class="folder closed">
           <span></span>
-          <span>CSS osadzony</span>
+          <span>CSS Osadzony</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для CSS osadzony -->
             <li class="file">
               <span></span>
               <span>1. CSSOsadzonyFile1.txt</span>
@@ -281,9 +245,8 @@ ul li:last-child:before {
         </li>
         <li class="folder closed">
           <span></span>
-          <span>CSS wewnetrzny</span>
+          <span>CSS Wewnętrzny</span>
           <ul style="display: none;">
-            <!-- Вложенные файлы и папки для CSS wewnetrzny -->
             <li class="file">
               <span></span>
               <span>1. CSSWewnetrznyFile1.txt</span>
@@ -291,6 +254,20 @@ ul li:last-child:before {
             <li class="file">
               <span></span>
               <span>2. CSSWewnetrznyFile2.txt</span>
+            </li>
+          </ul>
+        </li>
+        <li class="folder closed">
+          <span></span>
+          <span>Wszystkie Zdjęcia</span>
+          <ul style="display: none;">
+            <li class="file">
+              <span></span>
+              <span>1. ZdjeciaFile1.txt</span>
+            </li>
+            <li class="file">
+              <span></span>
+              <span>2. ZdjeciaFile2.txt</span>
             </li>
           </ul>
         </li>
