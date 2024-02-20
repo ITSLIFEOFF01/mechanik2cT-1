@@ -3,47 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📁 Web Cloud by It's Life</title> <!-- Изменена иконка для заголовка -->
+    <title>📁 Web Cloud by It's Life</title>
     <style>
-        /* Стили для фона страницы */
         body {
             background: linear-gradient(45deg, #ff8a00, #e52e71);
-            padding: 20px; /* Добавляем внутренние отступы для контейнера */
+            padding: 20px;
             font-family: Arial, sans-serif;
         }
 
-        /* Стили для контейнера */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.7); /* Прозрачный цвет фона контейнера */
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
 
-        /* Стили для заголовка */
         h2 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #333; /* Цвет текста заголовка */
+            color: #333;
         }
 
-        /* Стили для списка */
         ul {
             list-style-type: none;
             padding: 0;
         }
 
-        /* Стили для элементов списка */
         ul li {
             position: relative;
-            padding-left: 30px; /* Увеличен отступ для учета мини-фото */
-            margin-bottom: 15px; /* Увеличиваем отступ между элементами списка */
+            padding-left: 30px;
+            margin-bottom: 15px;
         }
 
-        /* Стили для линий между элементами */
         ul li:before {
             content: "";
             position: absolute;
@@ -53,29 +47,25 @@
             height: 100%;
         }
 
-        /* Стили для половинной линии между последним элементом и его родителем */
         ul li:last-child:before {
             height: 50%;
         }
 
-        /* Стили для иконок папок и файлов */
         .folder span, .file span {
             cursor: pointer;
             display: inline-block;
             margin-right: 10px;
-            vertical-align: middle; /* Выравниваем по вертикали */
-            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи */
+            vertical-align: middle;
+            font-size: 20px;
         }
 
-        /* Стили для иконок файлов */
         .file span {
-            font-size: 18px; /* Уменьшаем размер шрифта для имен файлов */
+            font-size: 18px;
         }
 
-        /* Стили для информации об авторе */
         #author-info {
-            font-size: 18px; /* Увеличиваем размер шрифта для информации об авторе */
-            margin-bottom: 20px; /* Увеличиваем отступ снизу */
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
     </style>
