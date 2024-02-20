@@ -16,7 +16,7 @@
             content: "";
             width: 12px;
             height: 12px;
-            background-image: url(1.png); /* Замените на путь к вашей иконке файла */
+            background-image: url(file_icon.png); /* Путь к иконке файла */
             background-size: cover;
             display: inline-block;
             position: absolute;
@@ -26,22 +26,13 @@
         }
 
         /* Иконка для открытой папки */
-        .folder > input:checked + label::before {
-            background-image: url(1.png); /* Замените на путь к вашей иконке открытой папки */
+        .folder > .folder-toggle::before {
+            content: url(open_folder_icon.png); /* Путь к иконке открытой папки */
         }
 
         /* Иконка для закрытой папки */
-        .folder > label::before {
-            content: "";
-            width: 12px;
-            height: 12px;
-            background-image: url(2.png); /* Замените на путь к вашей иконке закрытой папки */
-            background-size: cover;
-            display: inline-block;
-            position: absolute;
-            left: -20px;
-            top: 50%;
-            transform: translateY(-50%);
+        .folder.collapsed > .folder-toggle::before {
+            content: url(closed_folder_icon.png); /* Путь к иконке закрытой папки */
         }
 
         /* Стили для ссылок (файлов) */
@@ -58,7 +49,7 @@
             content: "";
             width: 12px;
             height: 12px;
-            background-image: url(1.png); /* Замените на путь к вашей иконке файла */
+            background-image: url(file_icon.png); /* Путь к иконке файла */
             background-size: cover;
             display: inline-block;
             position: absolute;
@@ -72,26 +63,26 @@
     <div class="container">
         <h1>Web Explorer</h1>
         <ul id="fileTree">
-            <li class="folder">
-                <input type="checkbox" id="folder1" />
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder1')"></span>
                 <label for="folder1">Podstawy</label>
                 <ul>
                     <li><a href="#">File 1</a></li>
                     <li><a href="#">File 2</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder2" />
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder2')"></span>
                 <label for="folder2">Grafika</label>
                 <ul>
-                    <li class="folder">
-                        <input type="checkbox" id="folder3" />
+                    <li class="folder collapsed">
+                        <span class="folder-toggle" onclick="toggleFolder('folder3')"></span>
                         <label for="folder3">grafika</label>
                         <ul>
                             <li><a href="#">File 3</a></li>
                             <li><a href="#">File 4</a></li>
-                            <li class="folder">
-                                <input type="checkbox" id="folder4" />
+                            <li class="folder collapsed">
+                                <span class="folder-toggle" onclick="toggleFolder('folder4')"></span>
                                 <label for="folder4">gify</label>
                                 <ul>
                                     <li><a href="#">File 5</a></li>
@@ -99,14 +90,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="folder">
-                        <input type="checkbox" id="folder5" />
+                    <li class="folder collapsed">
+                        <span class="folder-toggle" onclick="toggleFolder('folder5')"></span>
                         <label for="folder5">strony</label>
                         <ul>
                             <li><a href="#">File 6</a></li>
                             <li><a href="#">File 7</a></li>
-                            <li class="folder">
-                                <input type="checkbox" id="folder6" />
+                            <li class="folder collapsed">
+                                <span class="folder-toggle" onclick="toggleFolder('folder6')"></span>
                                 <label for="folder6">inne</label>
                                 <ul>
                                     <li><a href="#">File 8</a></li>
@@ -118,8 +109,9 @@
                 </ul>
             </li>
             <!-- Добавляем остальные папки -->
-            <li class="folder">
-                <input type="checkbox" id="folder7" />
+            <!-- Папка Strony Miłosz -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder7')"></span>
                 <label for="folder7">Strony Miłosz</label>
                 <ul>
                     <li><a href="#">File 9</a></li>
@@ -128,44 +120,49 @@
                     <li><a href="#">File 12</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder8" />
+            <!-- Папка Tabele -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder8')"></span>
                 <label for="folder8">Tabele</label>
                 <ul>
                     <li><a href="#">File 13</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder9" />
+            <!-- Папка Span i Div -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder9')"></span>
                 <label for="folder9">Span i Div</label>
                 <ul>
                     <li><a href="#">File 14</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder10" />
+            <!-- Папка Folmurarze -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder10')"></span>
                 <label for="folder10">Folmurarze</label>
                 <ul>
                     <li><a href="#">File 15</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder11" />
+            <!-- Папка znaki specjalne -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder11')"></span>
                 <label for="folder11">znaki specjalne</label>
                 <ul>
                     <li><a href="#">File 16</a></li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder12" />
+            <!-- Папка CSS - Wpisany -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder12')"></span>
                 <label for="folder12">CSS - Wpisany</label>
                 <ul>
                     <li><a href="#">File 17</a></li>
                     <li><a href="#">File 18</a></li>
                     <li><a href="#">File 19</a></li>
                     <li><a href="#">File 20</a></li>
-                    <li class="folder">
-                        <input type="checkbox" id="folder13" />
+                    <li class="folder collapsed">
+                        <span class="folder-toggle" onclick="toggleFolder('folder13')"></span>
                         <label for="folder13">Grafika</label>
                         <ul>
                             <li><a href="#">File 21</a></li>
@@ -176,14 +173,15 @@
                     </li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder14" />
+            <!-- Папка CSS - Osadzony -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder14')"></span>
                 <label for="folder14">CSS - Osadzony</label>
                 <ul>
                     <li><a href="#">File 25</a></li>
                     <li><a href="#">File 26</a></li>
-                    <li class="folder">
-                        <input type="checkbox" id="folder15" />
+                    <li class="folder collapsed">
+                        <span class="folder-toggle" onclick="toggleFolder('folder15')"></span>
                         <label for="folder15">Grafika</label>
                         <ul>
                             <li><a href="#">File 27</a></li>
@@ -193,14 +191,15 @@
                     </li>
                 </ul>
             </li>
-            <li class="folder">
-                <input type="checkbox" id="folder16" />
+            <!-- Папка CSS - Wewnętrzy -->
+            <li class="folder collapsed">
+                <span class="folder-toggle" onclick="toggleFolder('folder16')"></span>
                 <label for="folder16">CSS - Wewnętrzy</label>
                 <ul>
                     <li><a href="#">File 30</a></li>
                     <li><a href="#">File 31</a></li>
-                    <li class="folder">
-                        <input type="checkbox" id="folder17" />
+                    <li class="folder collapsed">
+                        <span class="folder-toggle" onclick="toggleFolder('folder17')"></span>
                         <label for="folder17">CSS - Styles</label>
                         <ul>
                             <li><a href="#">File 32</a></li>
@@ -214,7 +213,7 @@
     <script>
         function toggleFolder(folderId) {
             var folder = document.getElementById(folderId);
-            folder.checked = !folder.checked;
+            folder.classList.toggle('collapsed');
         }
     </script>
 </body>
