@@ -26,7 +26,21 @@ ul {
 .folder > label {
     cursor: pointer;
     display: block;
-    padding: 5px;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.folder > label::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url('folder_icon.png'); /* Замените на путь к вашей иконке папки */
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .folder > ul {
