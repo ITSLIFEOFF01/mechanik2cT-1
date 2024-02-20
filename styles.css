@@ -27,7 +27,10 @@
 }
 
 .file:before {
-  content: "\2022"; /* Круглая точка в качестве маркера */
+  content: url('file-icon.png'); /* Путь к изображению файла */
   margin-left: -20px;
   margin-right: 5px;
+  width: 20px; /* Ширина изображения */
+  height: 20px; /* Высота изображения */
 }
+
