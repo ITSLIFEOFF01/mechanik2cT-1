@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Tree</title>
     <style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Tree</title>
-    <style>
-        /* Стили для древа файлов */
+        /* Стили для фона страницы */
         body {
             background: linear-gradient(45deg, #ff8a00, #e52e71);
             padding: 20px; /* Добавляем внутренние отступы для контейнера */
             font-family: Arial, sans-serif;
         }
 
+        /* Стили для контейнера */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -29,23 +23,27 @@
             text-align: left;
         }
 
+        /* Стили для заголовка */
         h2 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333; /* Цвет текста заголовка */
         }
 
+        /* Стили для списка */
         ul {
             list-style-type: none;
             padding: 0;
         }
 
+        /* Стили для элементов списка */
         ul li {
             position: relative;
             padding-left: 30px; /* Увеличен отступ для учета мини-фото */
             margin-bottom: 10px;
         }
 
+        /* Стили для линий между элементами */
         ul li:before {
             content: "";
             position: absolute;
@@ -55,26 +53,25 @@
             height: 100%;
         }
 
+        /* Стили для половинной линии между последним элементом и его родителем */
         ul li:last-child:before {
             height: 50%;
         }
 
+        /* Стили для иконок папок и файлов */
         .folder span, .file span {
             cursor: pointer;
             display: inline-block;
             margin-right: 10px;
-            width: 20px; /* Ширина мини-фото */
-            height: 20px; /* Высота мини-фото */
+            vertical-align: middle; /* Выравниваем по вертикали */
+            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи */
         }
 
-        .folder {
-            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи папок */
+        /* Стили для иконок файлов */
+        .file span {
+            font-size: 18px; /* Уменьшаем размер шрифта для имен файлов */
         }
 
-        .file {
-            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи файлов */
-        }
-    </style>
     </style>
 </head>
 <body>
@@ -84,8 +81,7 @@
     <div id="fileTree" class="file-tree">
         <ul>
             <li class="folder closed">
-                <span>📁</span>
-                <span>Podstawy</span>
+                <span>📁 Podstawy</span>
                 <ul style="display: none;">
                     <li class="file">
                         <span>📖</span>
@@ -98,16 +94,14 @@
                 </ul>
             </li>
             <li class="folder closed">
-                <span>📁</span>
-                <span>Grafika</span>
+                <span>📁 Grafika</span>
                 <ul style="display: none;">
                     <li class="file">
                         <span>📖</span>
                         <span>1. Image1.jpg</span>
                     </li>
                     <li class="folder closed">
-                        <span>📁</span>
-                        <span>Strony</span>
+                        <span>📁 Strony</span>
                         <ul style="display: none;">
                             <li class="file">
                                 <span>📖</span>
@@ -118,8 +112,7 @@
                                 <span>2. Page2.html</span>
                             </li>
                             <li class="folder closed">
-                                <span>📁</span>
-                                <span>Inne</span>
+                                <span>📁 Inne</span>
                                 <ul style="display: none;">
                                     <li class="file">
                                         <span>📖</span>
@@ -130,6 +123,7 @@
                         </ul>
                     </li>
                 </ul>
+            </li>
             </li>
             <li class="folder closed">
                 <span>📁</span>
