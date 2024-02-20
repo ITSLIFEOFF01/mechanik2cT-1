@@ -9,7 +9,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    background-image: url('1.png'); /* Замените на путь к вашей иконке файла */
+    background-image: url(1.png); /* Замените на путь к вашей иконке файла */
     background-size: cover;
     display: inline-block;
     position: absolute;
@@ -20,7 +20,7 @@
 
 /* Иконка для открытой папки */
 .folder > input:checked + label::before {
-    background-image: url('1.png'); /* Замените на путь к вашей иконке открытой папки */
+    background-image: url(1.png); /* Замените на путь к вашей иконке открытой папки */
 }
 
 /* Иконка для закрытой папки */
@@ -28,7 +28,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    background-image: url('2.png'); /* Замените на путь к вашей иконке закрытой папки */
+    background-image: url(2.png); /* Замените на путь к вашей иконке закрытой папки */
     background-size: cover;
     display: inline-block;
     position: absolute;
