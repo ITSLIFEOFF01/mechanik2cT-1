@@ -42,7 +42,7 @@ ul {
 
 ul li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 30px; /* Увеличен отступ для учета мини-фото */
     margin-bottom: 10px;
 }
 
@@ -61,6 +61,32 @@ ul li:last-child:before {
 
 .folder span {
     cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px; /* Ширина мини-фото */
+    height: 20px; /* Высота мини-фото */
+    background-image: url('folder-icon.jpg'); /* Фото для папок */
+    background-size: cover;
+}
+
+.file span {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px; /* Ширина мини-фото */
+    height: 20px; /* Высота мини-фото */
+    background-image: url('file-icon.jpg'); /* Фото для файлов */
+    background-size: cover;
+}
+
+.special-file span {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px; /* Ширина мини-фото */
+    height: 20px; /* Высота мини-фото */
+    background-image: url('special-file-icon.jpg'); /* Фото для особых файлов */
+    background-size: cover;
 }
 
 /* Для иконки сайта */
@@ -81,35 +107,45 @@ ul li:last-child:before {
     <div id="fileTree" class="file-tree">
       <ul>
         <li class="folder closed">
+          <span></span>
           <span>Podstawy</span>
           <ul style="display: none;">
             <li class="file">
+              <span></span>
               <span>1. File1.txt</span>
             </li>
             <li class="file">
+              <span></span>
               <span>2. File2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
+          <span></span>
           <span>Grafika</span>
           <ul style="display: none;">
             <li class="file">
+              <span></span>
               <span>1. Image1.jpg</span>
             </li>
             <li class="folder closed">
+              <span></span>
               <span>Strony</span>
               <ul style="display: none;">
                 <li class="file">
+                  <span></span>
                   <span>1. Page1.html</span>
                 </li>
                 <li class="file">
+                  <span></span>
                   <span>2. Page2.html</span>
                 </li>
                 <li class="folder closed">
+                  <span></span>
                   <span>Inne</span>
                   <ul style="display: none;">
                     <li class="file">
+                      <span></span>
                       <span>1. OtherFile.txt</span>
                     </li>
                   </ul>
@@ -119,108 +155,142 @@ ul li:last-child:before {
           </ul>
         </li>
         <li class="folder closed">
-          <span>Strony Milosz</span>
+          <span></span>
+          <span>Milosz</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для Milosz -->
             <li class="file">
-              <span>1. Document1.docx</span>
+              <span></span>
+              <span>1. MiloszFile1.txt</span>
             </li>
-            <li class="file">
-              <span>2. Document2.docx</span>
-            </li>
-            <li class="file">
-              <span>3. Document3.docx</span>
-            </li>
-            <li class="file">
-              <span>4. Document4.docx</span>
+            <li class="folder closed">
+              <span></span>
+              <span>MiloszSubFolder</span>
+              <ul style="display: none;">
+                <li class="file">
+                  <span></span>
+                  <span>1. MiloszSubFile1.txt</span>
+                </li>
+                <li class="file">
+                  <span></span>
+                  <span>2. MiloszSubFile2.txt</span>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
         <li class="folder closed">
+          <span></span>
           <span>Tabele</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для Tabele -->
             <li class="file">
-              <span>1. Data.xlsx</span>
+              <span></span>
+              <span>1. TabeleFile1.txt</span>
+            </li>
+            <li class="folder closed">
+              <span></span>
+              <span>TabeleSubFolder</span>
+              <ul style="display: none;">
+                <li class="file">
+                  <span></span>
+                  <span>1. TabeleSubFile1.txt</span>
+                </li>
+                <li class="file">
+                  <span></span>
+                  <span>2. TabeleSubFile2.txt</span>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
         <li class="folder closed">
+          <span></span>
           <span>Span i Div</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для Span i Div -->
             <li class="file">
-              <span>1. Styles.css</span>
+              <span></span>
+              <span>1. SpanDivFile1.txt</span>
+            </li>
+            <li class="file">
+              <span></span>
+              <span>2. SpanDivFile2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
+          <span></span>
           <span>Formularze</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для Formularze -->
             <li class="file">
-              <span>1. Form1.html</span>
+              <span></span>
+              <span>1. FormularzeFile1.txt</span>
+            </li>
+            <li class="file">
+              <span></span>
+              <span>2. FormularzeFile2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <span>Znaki specjalne</span>
+          <span></span>
+          <span>Znaki Specjalne</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для Znaki Specjalne -->
             <li class="file">
-              <span>1. SpecialChars.txt</span>
+              <span></span>
+              <span>1. ZnakiSpecjalneFile1.txt</span>
+            </li>
+            <li class="file">
+              <span></span>
+              <span>2. ZnakiSpecjalneFile2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <span>CSS - Wpisany</span>
+          <span></span>
+          <span>CSS wpisany</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для CSS wpisany -->
             <li class="file">
-              <span>1. Style1.css</span>
+              <span></span>
+              <span>1. CSSWpisanyFile1.txt</span>
             </li>
             <li class="file">
-              <span>2. Style2.css</span>
-            </li>
-            <li class="file">
-              <span>3. Style3.css</span>
-            </li>
-            <li class="file">
-              <span>4. Style4.css</span>
-            </li>
-            <li class="file">
-              <span>5. Style5.css</span>
-            </li>
-            <li class="file">
-              <span>6. Style6.css</span>
+              <span></span>
+              <span>2. CSSWpisanyFile2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <span>CSS - Osadzony</span>
+          <span></span>
+          <span>CSS osadzony</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для CSS osadzony -->
             <li class="file">
-              <span>1. Embedded1.css</span>
+              <span></span>
+              <span>1. CSSOsadzonyFile1.txt</span>
             </li>
             <li class="file">
-              <span>2. Embedded2.css</span>
-            </li>
-            <li class="file">
-              <span>3. Embedded3.css</span>
-            </li>
-            <li class="file">
-              <span>4. Embedded4.css</span>
+              <span></span>
+              <span>2. CSSOsadzonyFile2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <span>Zaglada swiata</span>
+          <span></span>
+          <span>CSS wewnetrzny</span>
           <ul style="display: none;">
+            <!-- Вложенные файлы и папки для CSS wewnetrzny -->
             <li class="file">
-              <span>1. Document1.pdf</span>
+              <span></span>
+              <span>1. CSSWewnetrznyFile1.txt</span>
             </li>
             <li class="file">
-              <span>2. Document2.pdf</span>
-            </li>
-            <li class="file">
-              <span>3. Document3.pdf</span>
-            </li>
-            <li class="file">
-              <span>4. Document4.pdf</span>
+              <span></span>
+              <span>2. CSSWewnetrznyFile2.txt</span>
             </li>
           </ul>
         </li>
