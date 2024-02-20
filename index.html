@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Tree</title>
+    <title>📁 File Tree</title> <!-- Изменена иконка для заголовка -->
     <style>
         /* Стили для фона страницы */
         body {
@@ -72,6 +72,12 @@
             font-size: 18px; /* Уменьшаем размер шрифта для имен файлов */
         }
 
+        /* Стили для информации об авторе */
+        #author-info {
+            font-size: 18px; /* Увеличиваем размер шрифта для информации об авторе */
+            margin-bottom: 20px; /* Увеличиваем отступ снизу */
+        }
+
     </style>
 </head>
 <body>
@@ -79,179 +85,3 @@
     <div id="author-info">Klasa 2cT, Grupa 1</div>
     <h2>Files:</h2>
     <div id="fileTree" class="file-tree">
-        <ul>
-            <li class="folder closed">
-                <span>📁 Podstawy</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. File1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. File2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁 Grafika</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. Image1.jpg</span>
-                    </li>
-                    <li class="folder closed">
-                        <span>📁 Strony</span>
-                        <ul style="display: none;">
-                            <li class="file">
-                                <span>📖</span>
-                                <span>1. Page1.html</span>
-                            </li>
-                            <li class="file">
-                                <span>📖</span>
-                                <span>2. Page2.html</span>
-                            </li>
-                            <li class="folder closed">
-                                <span>📁 Inne</span>
-                                <ul style="display: none;">
-                                    <li class="file">
-                                        <span>📖</span>
-                                        <span>1. OtherFile.txt</span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>Milosz</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. MiloszFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. MiloszFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>Tabele</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. TabeleFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. TabeleFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>Span i Div</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. SpanDivFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. SpanDivFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>Formularze</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. FormularzeFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. FormularzeFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>Znaki Specjalne</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. ZnakiSpecjalneFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. ZnakiSpecjalneFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>CSS Wpisany</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. CSSWpisanyFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. CSSWpisanyFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>CSS Osadzony</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. CSSOsadzonyFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. CSSOsadzonyFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span>📁</span>
-                <span>CSS Wewnętrzny</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span>📖</span>
-                        <span>1. CSSWewnetrznyFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span>📖</span>
-                        <span>2. CSSWewnetrznyFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const folders = document.querySelectorAll('.folder span');
-
-        folders.forEach(function (folder) {
-            folder.addEventListener('click', function () {
-                const nestedList = folder.parentElement.querySelector('ul');
-                folder.parentElement.classList.toggle('open');
-                nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
-            });
-        });
-    });
-</script>
-</body>
-</html>
