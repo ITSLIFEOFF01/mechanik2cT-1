@@ -46,3 +46,11 @@ function createFileTree(parent, data) {
 
 const fileTree = document.getElementById("fileTree");
 createFileTree(fileTree, fileTreeData);
+
+// Обработчик события для закрытия информационного меню
+const infoPanel = document.getElementById("infoPanel");
+const closeBtn = document.getElementById("closeBtn");
+
+closeBtn.addEventListener("click", () => {
+    infoPanel.style.display = "none";
+});
