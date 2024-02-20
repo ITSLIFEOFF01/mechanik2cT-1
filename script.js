@@ -5,5 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     folder.addEventListener('click', function () {
       folder.classList.toggle('open');
     });
+
+    const files = folder.querySelectorAll('.file');
+    files.forEach(function (file) {
+      file.style.display = 'none';
+    });
   });
 });
