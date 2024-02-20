@@ -7,13 +7,18 @@
     <style>
         /* Стили для древа файлов */
         body {
-            background-color: #f0f0f0; /* Цвет заднего фона */
+            background-image: url('your-background-image.jpg'); /* Задний фон для всей страницы */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            padding: 20px; /* Добавляем внутренние отступы для контейнера */
         }
 
         .container {
             max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7); /* Прозрачный цвет фона контейнера */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,11 +28,7 @@
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
-            background-image: url('your-background-image.jpg'); /* Задний фон для заголовка */
-            background-size: cover;
-            color: white; /* Цвет текста заголовка */
-            padding: 20px; /* Поля для заголовка */
-            border-radius: 5px; /* Округление углов */
+            color: #333; /* Цвет текста заголовка */
         }
 
         h2 {
@@ -65,78 +66,63 @@
             margin-right: 10px;
             width: 20px; /* Ширина мини-фото */
             height: 20px; /* Высота мини-фото */
-            background-size: cover;
         }
 
         .folder {
-            background-image: url('folder-icon.jpg'); /* Фото для папок */
+            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи папок */
         }
 
         .file {
-            background-image: url('file-icon.jpg'); /* Фото для файлов */
-        }
-
-        .special-file span {
-            background-image: url('special-file-icon.jpg'); /* Фото для особых файлов */
-        }
-
-        /* Для иконки сайта */
-        #site-icon {
-            width: 50px; /* Ширина иконки */
-            height: 50px; /* Высота иконки */
-            margin-right: 10px; /* Отступ справа */
-            vertical-align: middle;
+            font-size: 20px; /* Увеличиваем размер шрифта для эмоджи файлов */
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1><img id="site-icon" src="your-site-icon.png" alt="Site Icon"> File Tree</h1>
-    <h2>Andrii Kondratiuk</h2>
     <div id="author-info">Klasa 2cT, Grupa 1</div>
     <h2>Files:</h2>
     <div id="fileTree" class="file-tree">
         <ul>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Podstawy</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. File1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. File2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Grafika</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. Image1.jpg</span>
                     </li>
                     <li class="folder closed">
-                        <span></span>
+                        <span>🗂</span>
                         <span>Strony</span>
                         <ul style="display: none;">
                             <li class="file">
-                                <span></span>
+                                <span>📖</span>
                                 <span>1. Page1.html</span>
                             </li>
                             <li class="file">
-                                <span></span>
+                                <span>📖</span>
                                 <span>2. Page2.html</span>
                             </li>
                             <li class="folder closed">
-                                <span></span>
+                                <span>🗂</span>
                                 <span>Inne</span>
                                 <ul style="display: none;">
                                     <li class="file">
-                                        <span></span>
+                                        <span>📖</span>
                                         <span>1. OtherFile.txt</span>
                                     </li>
                                 </ul>
@@ -145,130 +131,115 @@
                     </li>
                 </ul>
             </li>
-            <!-- Другие папки и файлы здесь -->
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Milosz</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. MiloszFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. MiloszFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Tabele</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. TabeleFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. TabeleFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Span i Div</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. SpanDivFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. SpanDivFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Formularze</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. FormularzeFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. FormularzeFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>Znaki Specjalne</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. ZnakiSpecjalneFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. ZnakiSpecjalneFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>CSS Wpisany</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. CSSWpisanyFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. CSSWpisanyFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>CSS Osadzony</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. CSSOsadzonyFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. CSSOsadzonyFile2.txt</span>
                     </li>
                 </ul>
             </li>
             <li class="folder closed">
-                <span></span>
+                <span>🗂</span>
                 <span>CSS Wewnętrzny</span>
                 <ul style="display: none;">
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>1. CSSWewnetrznyFile1.txt</span>
                     </li>
                     <li class="file">
-                        <span></span>
+                        <span>📖</span>
                         <span>2. CSSWewnetrznyFile2.txt</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder closed">
-                <span></span>
-                <span>Wszystkie Zdjęcia</span>
-                <ul style="display: none;">
-                    <li class="file">
-                        <span></span>
-                        <span>1. ZdjeciaFile1.txt</span>
-                    </li>
-                    <li class="file">
-                        <span></span>
-                        <span>2. ZdjeciaFile2.txt</span>
                     </li>
                 </ul>
             </li>
