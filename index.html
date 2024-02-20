@@ -5,287 +5,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Tree</title>
     <style>
-/* Стили для древа файлов */
-body {
-    background-color: #f0f0f0; /* Цвет заднего фона */
-}
+        /* Стили для древа файлов */
+        body {
+            background-color: #f0f0f0; /* Цвет заднего фона */
+        }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    background-image: url('your-background-image.jpg'); /* Задний фон для заголовка */
-    background-size: cover;
-    color: white; /* Цвет текста заголовка */
-    padding: 20px; /* Поля для заголовка */
-    border-radius: 5px; /* Округление углов */
-}
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            background-image: url('your-background-image.jpg'); /* Задний фон для заголовка */
+            background-size: cover;
+            color: white; /* Цвет текста заголовка */
+            padding: 20px; /* Поля для заголовка */
+            border-radius: 5px; /* Округление углов */
+        }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-ul li {
-    position: relative;
-    padding-left: 30px; /* Увеличен отступ для учета мини-фото */
-    margin-bottom: 10px;
-}
+        ul li {
+            position: relative;
+            padding-left: 30px; /* Увеличен отступ для учета мини-фото */
+            margin-bottom: 10px;
+        }
 
-ul li:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    border-left: 2px solid #333;
-    height: 100%;
-}
+        ul li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            border-left: 2px solid #333;
+            height: 100%;
+        }
 
-ul li:last-child:before {
-    height: 50%;
-}
+        ul li:last-child:before {
+            height: 50%;
+        }
 
-.folder span, .file span {
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-    width: 20px; /* Ширина мини-фото */
-    height: 20px; /* Высота мини-фото */
-    background-size: cover;
-}
+        .folder span, .file span {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 10px;
+            width: 20px; /* Ширина мини-фото */
+            height: 20px; /* Высота мини-фото */
+            background-size: cover;
+        }
 
-.folder span {
-    background-image: url('folder-icon.jpg'); /* Фото для папок */
-}
+        .folder {
+            background-image: url('folder-icon.jpg'); /* Фото для папок */
+        }
 
-.file span {
-    background-image: url('file-icon.jpg'); /* Фото для файлов */
-}
+        .file {
+            background-image: url('file-icon.jpg'); /* Фото для файлов */
+        }
 
-.special-file span {
-    background-image: url('special-file-icon.jpg'); /* Фото для особых файлов */
-}
+        .special-file span {
+            background-image: url('special-file-icon.jpg'); /* Фото для особых файлов */
+        }
 
-/* Для иконки сайта */
-#site-icon {
-    width: 50px; /* Ширина иконки */
-    height: 50px; /* Высота иконки */
-    margin-right: 10px; /* Отступ справа */
-    vertical-align: middle;
-}
+        /* Для иконки сайта */
+        #site-icon {
+            width: 50px; /* Ширина иконки */
+            height: 50px; /* Высота иконки */
+            margin-right: 10px; /* Отступ справа */
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <h1><img id="site-icon" src="your-site-icon.png" alt="Site Icon"> File Tree</h1>
     <h2>Andrii Kondratiuk</h2>
     <div id="author-info">Klasa 2cT, Grupa 1</div>
     <h2>Files:</h2>
     <div id="fileTree" class="file-tree">
-      <ul>
-        <li class="folder closed">
-          <span style="background-image: url('file-icon.jpg');"></span>
-          <span>Podstawy</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. File1.txt</span>
-            </li>
-            <li class="file">
-              <span></span>
-              <span>2. File2.txt</span>
-            </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span style="background-image: url('file-icon.jpg');"></span>
-          <span>Grafika</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. Image1.jpg</span>
+        <ul>
+            <li class="folder closed">
+                <span></span>
+                <span>Podstawy</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. File1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. File2.txt</span>
+                    </li>
+                </ul>
             </li>
             <li class="folder closed">
-              <span style="background-image: url('file-icon.jpg');"></span>
-              <span>Strony</span>
-              <ul style="display: none;">
-                <li class="file">
-                  <span></span>
-                  <span>1. Page1.html</span>
-                </li>
-                <li class="file">
-                  <span></span>
-                  <span>2. Page2.html</span>
-                </li>
-                <li class="folder closed">
-                  <span style="background-image: url('file-icon.jpg');"></span>
-                  <span>Inne</span>
-                  <ul style="display: none;">
+                <span></span>
+                <span>Grafika</span>
+                <ul style="display: none;">
                     <li class="file">
-                      <span></span>
-                      <span>1. OtherFile.txt</span>
+                        <span></span>
+                        <span>1. Image1.jpg</span>
                     </li>
-                  </ul>
-                </li>
-              </ul>
+                    <li class="folder closed">
+                        <span></span>
+                        <span>Strony</span>
+                        <ul style="display: none;">
+                            <li class="file">
+                                <span></span>
+                                <span>1. Page1.html</span>
+                            </li>
+                            <li class="file">
+                                <span></span>
+                                <span>2. Page2.html</span>
+                            </li>
+                            <li class="folder closed">
+                                <span></span>
+                                <span>Inne</span>
+                                <ul style="display: none;">
+                                    <li class="file">
+                                        <span></span>
+                                        <span>1. OtherFile.txt</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Milosz</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. MiloszFile1.txt</span>
+            <!-- Другие папки и файлы здесь -->
+            <li class="folder closed">
+                <span></span>
+                <span>Milosz</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. MiloszFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. MiloszFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-            <li class="file">
-              <span></span>
-              <span>2. MiloszFile2.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>Tabele</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. TabeleFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. TabeleFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Tabele</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. TabeleFile1.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>Span i Div</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. SpanDivFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. SpanDivFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-            <li class="file">
-              <span></span>
-              <span>2. TabeleFile2.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>Formularze</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. FormularzeFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. FormularzeFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Span i Div</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. SpanDivFile1.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>Znaki Specjalne</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. ZnakiSpecjalneFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. ZnakiSpecjalneFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-            <li class="file">
-              <span></span>
-              <span>2. SpanDivFile2.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>CSS Wpisany</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. CSSWpisanyFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. CSSWpisanyFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Formularze</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. FormularzeFile1.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>CSS Osadzony</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. CSSOsadzonyFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. CSSOsadzonyFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-            <li class="file">
-              <span></span>
-              <span>2. FormularzeFile2.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>CSS Wewnętrzny</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. CSSWewnetrznyFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. CSSWewnetrznyFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Znaki Specjalne</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. ZnakiSpecjalneFile1.txt</span>
+            <li class="folder closed">
+                <span></span>
+                <span>Wszystkie Zdjęcia</span>
+                <ul style="display: none;">
+                    <li class="file">
+                        <span></span>
+                        <span>1. ZdjeciaFile1.txt</span>
+                    </li>
+                    <li class="file">
+                        <span></span>
+                        <span>2. ZdjeciaFile2.txt</span>
+                    </li>
+                </ul>
             </li>
-            <li class="file">
-              <span></span>
-              <span>2. ZnakiSpecjalneFile2.txt</span>
-            </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>CSS Wpisany</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. CSSWpisanyFile1.txt</span>
-            </li>
-            <li class="file">
-              <span></span>
-              <span>2. CSSWpisanyFile2.txt</span>
-            </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>CSS Osadzony</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. CSSOsadzonyFile1.txt</span>
-            </li>
-            <li class="file">
-              <span></span>
-              <span>2. CSSOsadzonyFile2.txt</span>
-            </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>CSS Wewnętrzny</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. CSSWewnetrznyFile1.txt</span>
-            </li>
-            <li class="file">
-              <span></span>
-              <span>2. CSSWewnetrznyFile2.txt</span>
-            </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <span></span>
-          <span>Wszystkie Zdjęcia</span>
-          <ul style="display: none;">
-            <li class="file">
-              <span></span>
-              <span>1. ZdjeciaFile1.txt</span>
-            </li>
-            <li class="file">
-              <span></span>
-              <span>2. ZdjeciaFile2.txt</span>
-            </li>
-          </ul>
-        </li>
-      </ul>
+        </ul>
     </div>
-  </div>
-  <script>
+</div>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
-      const folders = document.querySelectorAll('.folder span');
+        const folders = document.querySelectorAll('.folder span');
 
-      folders.forEach(function (folder) {
-        folder.addEventListener('click', function () {
-          const nestedList = folder.parentElement.querySelector('ul');
-          folder.parentElement.classList.toggle('open');
-          nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
+        folders.forEach(function (folder) {
+            folder.addEventListener('click', function () {
+                const nestedList = folder.parentElement.querySelector('ul');
+                folder.parentElement.classList.toggle('open');
+                nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
+            });
         });
-      });
     });
-  </script>
+</script>
 </body>
 </html>
