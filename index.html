@@ -4,7 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Explorer</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Разделитель между элементами */
+        .separator {
+            border-bottom: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        /* Иконка для файла */
+        .file::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url(1.png); /* Замените на путь к вашей иконке файла */
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Иконка для открытой папки */
+        .folder > input:checked + label::before {
+            background-image: url(1.png); /* Замените на путь к вашей иконке открытой папки */
+        }
+
+        /* Иконка для закрытой папки */
+        .folder > label::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url(2.png); /* Замените на путь к вашей иконке закрытой папки */
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Стили для ссылок (файлов) */
+        a {
+            color: #333;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            padding-left: 20px; /* Смещаем текст, чтобы он был справа от иконки */
+        }
+
+        /* Иконка для ссылки (файла) */
+        a::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url(1.png); /* Замените на путь к вашей иконке файла */
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -55,6 +117,7 @@
                     <li><a href="#">index.html</a></li>
                 </ul>
             </li>
+            <!-- Добавляем остальные папки -->
             <li class="folder">
                 <input type="checkbox" id="folder7" />
                 <label for="folder7">Strony Miłosz</label>
@@ -148,5 +211,11 @@
             </li>
         </ul>
     </div>
+    <script>
+        function toggleFolder(folderId) {
+            var folder = document.getElementById(folderId);
+            folder.checked = !folder.checked;
+        }
+    </script>
 </body>
 </html>
