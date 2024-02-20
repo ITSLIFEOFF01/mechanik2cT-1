@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Tree</title>
     <style>
+/* Стили для древа файлов */
+body {
+    background-color: #f0f0f0; /* Цвет заднего фона */
+}
+
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -18,6 +23,11 @@
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    background-image: url('your-background-image.jpg'); /* Задний фон для заголовка */
+    background-size: cover;
+    color: white; /* Цвет текста заголовка */
+    padding: 20px; /* Поля для заголовка */
+    border-radius: 5px; /* Округление углов */
 }
 
 h2 {
@@ -49,80 +59,57 @@ ul li:last-child:before {
     height: 50%;
 }
 
-.folder img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    vertical-align: middle;
+.folder span {
     cursor: pointer;
 }
 
-.file:not(.special-file):before {
-    content: url('file-icon.png');
-    margin-left: -20px;
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
+/* Для иконки сайта */
+#site-icon {
+    width: 50px; /* Ширина иконки */
+    height: 50px; /* Высота иконки */
+    margin-right: 10px; /* Отступ справа */
+    vertical-align: middle;
 }
-
-.special-file:before {
-    content: url('special-file-icon.png');
-    margin-left: -20px;
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-}
-
     </style>
 </head>
 <body>
   <div class="container">
-    <h1>Web Cloud</h1>
+    <h1><img id="site-icon" src="your-site-icon.png" alt="Site Icon"> File Tree</h1>
     <h2>Andrii Kondratiuk</h2>
     <div id="author-info">Klasa 2cT, Grupa 1</div>
     <h2>Files:</h2>
     <div id="fileTree" class="file-tree">
       <ul>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Podstawy</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. File1.txt</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>2. File2.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Grafika</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Image1.jpg</span>
             </li>
             <li class="folder closed">
-              <img src="folder1.png">
               <span>Strony</span>
               <ul style="display: none;">
                 <li class="file">
-                  <img src="file-icon.png">
                   <span>1. Page1.html</span>
                 </li>
                 <li class="file">
-                  <img src="file-icon.png">
                   <span>2. Page2.html</span>
                 </li>
                 <li class="folder closed">
-                  <img src="folder1.png">
                   <span>Inne</span>
                   <ul style="display: none;">
                     <li class="file">
-                      <img src="file-icon.png">
                       <span>1. OtherFile.txt</span>
                     </li>
                   </ul>
@@ -132,166 +119,122 @@ ul li:last-child:before {
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Strony Milosz</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Document1.docx</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>2. Document2.docx</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>3. Document3.docx</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>4. Document4.docx</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Tabele</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Data.xlsx</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Span i Div</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Styles.css</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Formularze</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Form1.html</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>Znaki specjalne</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. SpecialChars.txt</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>CSS - Wpisany</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Style1.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>2. Style2.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>3. Style3.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>4. Style4.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>5. Style5.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>6. Style6.css</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
           <span>CSS - Osadzony</span>
           <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
               <span>1. Embedded1.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
               <span>2. Embedded2.css</span>
             </li>
-          </ul>
-        </li>
-        <li class="folder closed">
-          <img src="folder1.png">
-          <span>CSS - Wewnetrzny</span>
-          <ul style="display: none;">
             <li class="file">
-              <img src="file-icon.png">
-              <span>1. Internal1.css</span>
+              <span>3. Embedded3.css</span>
             </li>
             <li class="file">
-              <img src="file-icon.png">
-              <span>2. Internal2.css</span>
-            </li>
-            <li class="folder closed">
-              <img src="folder1.png">
-              <span>Styles</span>
-              <ul style="display: none;">
-                <li class="file">
-                  <img src="file-icon.png">
-                  <span>1. InternalStyle1.css</span>
-                </li>
-                <li class="file">
-                  <img src="file-icon.png">
-                  <span>2. InternalStyle2.css</span>
-                </li>
-              </ul>
+              <span>4. Embedded4.css</span>
             </li>
           </ul>
         </li>
         <li class="folder closed">
-          <img src="folder1.png">
-          <span>Wszystkie zdjecia</span>
+          <span>Zaglada swiata</span>
           <ul style="display: none;">
-            <li class="file special-file">
-              <img src="special-file-icon.png">
-              <span>1. Image1.jpg</span>
+            <li class="file">
+              <span>1. Document1.pdf</span>
             </li>
-            <li class="file special-file">
-              <img src="special-file-icon.png">
-              <span>2. Image2.jpg</span>
+            <li class="file">
+              <span>2. Document2.pdf</span>
             </li>
-            <!-- Add other files similarly -->
+            <li class="file">
+              <span>3. Document3.pdf</span>
+            </li>
+            <li class="file">
+              <span>4. Document4.pdf</span>
+            </li>
           </ul>
         </li>
-        <!-- Add other folders similarly -->
       </ul>
     </div>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const folders = document.querySelectorAll('.folder');
+      const folders = document.querySelectorAll('.folder span');
 
       folders.forEach(function (folder) {
         folder.addEventListener('click', function () {
-          folder.classList.toggle('open');
-          const nestedList = folder.querySelector('ul');
+          const nestedList = folder.parentElement.querySelector('ul');
+          folder.parentElement.classList.toggle('open');
           nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
         });
       });
