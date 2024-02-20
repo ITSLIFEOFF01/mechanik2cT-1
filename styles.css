@@ -1,53 +1,33 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    z-index: -1;
-}
-
-.info-panel {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    display: none; /* Информационное меню изначально скрыто */
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
+/* Стили для древа файлов */
 .file-tree {
-    margin: 20px; /* Изменено с 50px на 20px */
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    overflow-y: auto; /* Добавлено свойство для вертикального скролла */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Стили для папок */
 .folder {
-    margin-left: 20px;
+  list-style: none;
+  margin-bottom: 5px;
 }
 
+.folder img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Стили для файлов */
 .file {
-    margin-left: 40px;
+  list-style: none;
+  margin-left: 25px;
+}
+
+.file:before {
+  content: "\2022"; /* Круглая точка в качестве маркера */
+  margin-left: -20px;
+  margin-right: 5px;
 }
