@@ -51,7 +51,7 @@ a::before {
     content: "";
     width: 12px;
     height: 12px;
-    background-image: url('file_icon.png'); /* Замените на путь к вашей иконке файла */
+    background-image: url(1.png); /* Замените на путь к вашей иконке файла */
     background-size: cover;
     display: inline-block;
     position: absolute;
